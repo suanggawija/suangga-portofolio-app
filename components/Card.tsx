@@ -56,3 +56,37 @@ export const PortofolioCart: React.FC<CartProps> = ({
     </div>
   </motion.div>
 );
+
+export const SkillCart: React.FC<CartProps> = ({
+  image,
+  title,
+  desc,
+  delay,
+}) => (
+  <motion.div
+    initial="initial"
+    whileInView="animate"
+    variants={fadeInAnimation}
+    transition={{
+      duration: 0.8,
+      ease: "easeOut",
+      delay: delay,
+    }}
+    viewport={{ once: false }}
+  >
+    <div className="w-full rounded-md relative aspect-[1/1] overflow-hidden">
+      <Image
+        priority
+        src={image}
+        alt={title}
+        width={300}
+        height={300}
+        className="w-full h-full object-cover rounded-md hover:scale-110 overflow-hidden transition-all duration-3000ms"
+      />
+    </div>
+    <div className="flex flex-col gap-1">
+      <h3 className="text-2xl font-medium mt-2">{title}</h3>
+      <p>{desc}</p>
+    </div>
+  </motion.div>
+);

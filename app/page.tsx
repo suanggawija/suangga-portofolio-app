@@ -7,36 +7,10 @@ import {
 import { PortofolioCart } from "@/components/Card";
 import { RoundedBlurBackground } from "@/components/RoundedBlur";
 import { H1, H2, P } from "@/components/Text";
+import { PortofolioData } from "@/data/Portofolio";
 import React from "react";
 
 const Home = () => {
-  const Portofolio = [
-    {
-      title: "title",
-      images: "/images/coba.png",
-      tags: ["Website", "UI/UX"],
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, optio!",
-    },
-    {
-      title: "title",
-      images: "/images/coba.png",
-      tags: ["Website", "UI/UX"],
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, optio!",
-    },
-    {
-      title: "title",
-      images: "/images/coba.png",
-      tags: ["Website", "UI/UX"],
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, optio!",
-    },
-    {
-      title: "title",
-      images: "/images/coba.png",
-      tags: ["Website", "UI/UX"],
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, optio!",
-    },
-  ];
-
   return (
     <>
       <section className="w-full min-h-screen justify-center items-center flex gap-4 flex-col relative">
@@ -93,7 +67,7 @@ const Home = () => {
       <section className="w-full min-h-screen flex flex-col gap-4 justify-center items-center relative px-[80px]">
         <H2 title="Portofolio" />
         <div className="w-full grid grid-cols-2 gap-4 ">
-          {Portofolio.map((porto, index) => (
+          {PortofolioData.map((porto, index) => (
             <PortofolioCart
               key={index}
               image={porto.images}

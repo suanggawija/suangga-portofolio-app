@@ -25,7 +25,7 @@ export const H1: React.FC<Heading> = ({ title }) => (
   </motion.h1>
 );
 
-export const H2: React.FC<Heading> = ({ title }) => (
+export const H2: React.FC<Heading> = ({ title, delay = 0 }) => (
   <motion.h2
     className="text-3xl font-medium"
     initial="initial"
@@ -34,6 +34,7 @@ export const H2: React.FC<Heading> = ({ title }) => (
     transition={{
       duration: 0.8,
       ease: "easeOut",
+      delay: delay,
     }}
     viewport={{ once: false }}
   >
