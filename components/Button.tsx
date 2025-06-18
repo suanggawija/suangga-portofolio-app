@@ -47,10 +47,13 @@ export const ButtonSecondary: React.FC<ButtonProps> = ({
   href,
   delay,
 }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false });
   return (
     <motion.div
+      ref={ref}
       initial="initial"
-      whileInView="animate"
+      animate={isInView ? "animate" : "initial"}
       variants={fadeInAnimation}
       transition={{
         duration: 0.8,

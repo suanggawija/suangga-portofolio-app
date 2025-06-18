@@ -1,13 +1,15 @@
 "use client";
-import { H1, H2, H3, P } from "@/components/Text";
+import { H1, H2, P } from "@/components/Text";
 import React from "react";
 import { motion } from "motion/react";
 import Image from "next/image";
 import { FadeInAnimation } from "@/components/Animation";
 import { ButtonSecondary, LinkUnderline } from "@/components/Button";
 import { RoundedBlurBackground } from "@/components/RoundedBlur";
-import { PortofolioCart, SkillCart } from "@/components/Card";
+import { PortofolioCart, SkillCart, ToolsCart } from "@/components/Card";
 import { PortofolioData } from "@/data/Portofolio";
+import { KeahlianData } from "@/data/Keahlian";
+import { Tools } from "@/data/Tools";
 
 const About = () => {
   return (
@@ -87,40 +89,40 @@ const About = () => {
         </div>
         <RoundedBlurBackground />
       </section>
+
+      {/* Keahlian */}
       <section className="w-full min-h-screen justify-center items-center flex gap-4 flex-col relative px-[80px]">
         <H2 title="Keahlian" />
         <div className="grid grid-cols-4 gap-4 w-full">
-          <SkillCart
-            title="Klill"
-            desc="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias, voluptates."
-            image="/images/coba.png"
-            delay={0.6}
-          />
-          <SkillCart
-            title="Klill"
-            desc="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias, voluptates."
-            image="/images/coba.png"
-            delay={0.8}
-          />
-          <SkillCart
-            title="Klill"
-            desc="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias, voluptates."
-            image="/images/coba.png"
-            delay={1}
-          />
-          <SkillCart
-            title="Klill"
-            desc="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias, voluptates."
-            image="/images/coba.png"
-            delay={1.2}
-          />
+          {KeahlianData.map((keahliah, index) => (
+            <SkillCart
+              key={index}
+              title={keahliah.title}
+              desc={keahliah.desc}
+              image={keahliah.image}
+              delay={0.2 * index + 0.4}
+            />
+          ))}
         </div>
         <RoundedBlurBackground />
       </section>
+      {/* tools */}
       <section className="w-full min-h-screen justify-center items-center flex gap-4 flex-col relative px-[80px]">
         <H2 title="Tools" />
+        <div className="grid grid-cols-10 gap-4">
+          {Tools.map((tool, index) => (
+            <ToolsCart
+              title={tool.title}
+              image={tool.image}
+              href={tool.href}
+              key={index}
+              delay={0.2 * index}
+            />
+          ))}
+        </div>
         <RoundedBlurBackground />
       </section>
+      {/* portofolio */}
       <section className="w-full min-h-screen flex flex-col gap-4 justify-center items-center relative px-[80px]">
         <H2 title="Portofolio" />
         <div className="w-full grid grid-cols-2 gap-4 ">
@@ -140,14 +142,16 @@ const About = () => {
         </div>
         <RoundedBlurBackground />
       </section>
-      <section className="w-full min-h-screen justify-center items-center flex gap-4 flex-col relative px-[80px]">
+      {/* Pengalaman */}
+      {/* <section className="w-full min-h-screen justify-center items-center flex gap-4 flex-col relative px-[80px]">
         <H2 title="Pengalaman Pekerjaan" />
         <RoundedBlurBackground />
-      </section>
-      <section className="w-full min-h-screen justify-center items-center flex gap-4 flex-col relative px-[80px]">
+      </section> */}
+      {/* pendidikan */}
+      {/* <section className="w-full min-h-screen justify-center items-center flex gap-4 flex-col relative px-[80px]">
         <H2 title="Pendidikan" />
         <RoundedBlurBackground />
-      </section>
+      </section> */}
       <section className="w-full min-h-screen flex flex-col gap-4 justify-center items-center relative px-[80px] relative">
         <H2 title="Kontak" />
         <div className="flex gap-2">
