@@ -27,10 +27,12 @@ const About = () => {
         />
         <RoundedBlurBackground />
       </section>
+
+      {/* about */}
       <section className="w-full min-h-screen justify-center items-center flex gap-4 flex-col relative px-[80px]">
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 gap-6">
           <motion.div
-            className="w-full rounded-md relative aspect-[16/9] overflow-hidden"
+            className="w-full h-[400px] rounded-md relative aspect-[9/12] overflow-hidden"
             initial="initial"
             whileInView="animate"
             variants={FadeInAnimation}
@@ -41,12 +43,12 @@ const About = () => {
             viewport={{ once: false }}
           >
             <Image
-              src={"/images/coba.png"}
+              src={"/images/suangga.png"}
               alt="coba"
-              height={200}
-              width={200}
+              height={500}
+              width={500}
               priority
-              className="w-full h-full object-cover rounded-md hover:scale-110 overflow-hidden transition-all duration-3000ms"
+              className="w-full h-full object-cover rounded-md overflow-hidden transition-all duration-3000ms"
             />
           </motion.div>
 

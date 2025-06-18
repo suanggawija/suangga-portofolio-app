@@ -1,22 +1,22 @@
 export const KeahlianData = [
   {
     title: "Web Developer",
-    image: "/images/coba.png",
+    image: "/icons/html.svg",
     desc: "Pembuatan applikasi berbasis website yang ramah pengguna",
   },
   {
     title: "Data Analyst",
-    image: "/images/coba.png",
+    image: "/icons/tensorflow.svg",
     desc: "Melakukan analisis terhadap data dan membuat model AI dan Machine Learning",
   },
   {
     title: "UI/UX",
-    image: "/images/coba.png",
+    image: "/icons/figma.svg",
     desc: "Membuat desain antar muka pengguna website dan mobile applikasi",
   },
   {
     title: "Desain Grafix",
-    image: "/images/coba.png",
+    image: "/icons/illustrator.svg",
     desc: "Membuat tampilan visual dan personal branding untuk media sosial",
   },
 ];

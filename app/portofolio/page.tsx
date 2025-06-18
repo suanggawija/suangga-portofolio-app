@@ -3,7 +3,7 @@ import { LinkUnderline } from "@/components/Button";
 import { PortofolioCart } from "@/components/Card";
 import { RoundedBlurBackground } from "@/components/RoundedBlur";
 import { H1, P } from "@/components/Text";
-import { PortofolioData } from "@/data/Portofolio";
+import { PortofolioData, PortofolioDataFull } from "@/data/Portofolio";
 import React from "react";
 import { motion } from "motion/react";
 
@@ -17,17 +17,7 @@ const Portofolio = () => {
           delay={0.5}
         />
         <div className="w-full grid grid-cols-2 gap-4 mt-6 mb-[80px]">
-          {PortofolioData.map((porto, index) => (
-            <PortofolioCart
-              key={index}
-              image={porto.images}
-              title={porto.title}
-              desc={porto.desc}
-              tags={porto.tags}
-              delay={index % 2 == 0 ? 0.4 : 0.8}
-            />
-          ))}
-          {PortofolioData.map((porto, index) => (
+          {PortofolioDataFull.map((porto, index) => (
             <PortofolioCart
               key={index}
               image={porto.images}
