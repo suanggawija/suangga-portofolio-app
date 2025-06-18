@@ -1,7 +1,7 @@
 import Link from "next/link";
-import React from "react";
+import React, { useRef } from "react";
 import { FadeInAnimation } from "./Animation";
-import { motion } from "motion/react";
+import { motion, useInView } from "motion/react";
 
 const fadeInAnimation = FadeInAnimation;
 
@@ -15,10 +15,13 @@ export const ButtonPrimary: React.FC<ButtonProps> = ({
   href,
   delay = 0,
 }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false });
   return (
     <motion.div
+      ref={ref}
       initial="initial"
-      whileInView="animate"
+      animate={isInView ? "animate" : "initial"}
       variants={fadeInAnimation}
       transition={{
         duration: 0.8,
