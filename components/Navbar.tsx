@@ -1,8 +1,10 @@
 "use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
 
 const Navbar = () => {
+  const pathname = usePathname();
   const Menu = [
     {
       title: "Beranda",
@@ -37,7 +39,12 @@ const Navbar = () => {
         <ul className="flex gap-5 text-gray-600 dark:text-gray-400 text-sm">
           {Menu.map((item, index) => (
             <li key={index}>
-              <Link href={item.href} className="hover:text-cyan-700">
+              <Link
+                href={item.href}
+                className={`${
+                  pathname == item.href ? "text-cyan-600" : ""
+                } hover:text-cyan-700`}
+              >
                 {item.title}
               </Link>
             </li>
