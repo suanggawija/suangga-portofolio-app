@@ -63,7 +63,6 @@ const Home = () => {
         <RoundedBlurBackground />
       </section>
 
-      {/*  */}
       <section className="w-full min-h-screen flex flex-col gap-4 justify-center items-center relative px-[80px]">
         <H2 title="Portofolio" />
         <div className="w-full grid grid-cols-2 gap-4 ">
@@ -84,7 +83,6 @@ const Home = () => {
         <RoundedBlurBackground />
       </section>
 
-      {/*  */}
       <section className="w-full min-h-screen flex flex-col gap-4 justify-center items-center relative px-[80px] relative">
         <H2 title="Kontak" />
         <div className="flex gap-2">

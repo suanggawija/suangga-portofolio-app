@@ -28,7 +28,6 @@ const About = () => {
         <RoundedBlurBackground />
       </section>
 
-      {/* about */}
       <section className="w-full min-h-screen justify-center items-center flex gap-4 flex-col relative px-[80px]">
         <div className="grid grid-cols-2 gap-6">
           <motion.div
@@ -92,7 +91,6 @@ const About = () => {
         <RoundedBlurBackground />
       </section>
 
-      {/* Keahlian */}
       <section className="w-full min-h-screen justify-center items-center flex gap-4 flex-col relative px-[80px]">
         <H2 title="Keahlian" />
         <div className="grid grid-cols-4 gap-4 w-full">
@@ -108,7 +106,7 @@ const About = () => {
         </div>
         <RoundedBlurBackground />
       </section>
-      {/* tools */}
+
       <section className="w-full min-h-screen justify-center items-center flex gap-4 flex-col relative px-[80px]">
         <H2 title="Tools" />
         <div className="grid grid-cols-10 gap-4">
@@ -124,7 +122,7 @@ const About = () => {
         </div>
         <RoundedBlurBackground />
       </section>
-      {/* portofolio */}
+
       <section className="w-full min-h-screen flex flex-col gap-4 justify-center items-center relative px-[80px]">
         <H2 title="Portofolio" />
         <div className="w-full grid grid-cols-2 gap-4 ">
@@ -144,16 +142,7 @@ const About = () => {
         </div>
         <RoundedBlurBackground />
       </section>
-      {/* Pengalaman */}
-      {/* <section className="w-full min-h-screen justify-center items-center flex gap-4 flex-col relative px-[80px]">
-        <H2 title="Pengalaman Pekerjaan" />
-        <RoundedBlurBackground />
-      </section> */}
-      {/* pendidikan */}
-      {/* <section className="w-full min-h-screen justify-center items-center flex gap-4 flex-col relative px-[80px]">
-        <H2 title="Pendidikan" />
-        <RoundedBlurBackground />
-      </section> */}
+
       <section className="w-full min-h-screen flex flex-col gap-4 justify-center items-center relative px-[80px] relative">
         <H2 title="Kontak" />
         <div className="flex gap-2">
