@@ -117,7 +117,7 @@ export const ToolsCart: React.FC<CartProps> = ({
     }}
     viewport={{ once: false }}
   >
-    <Link href={href}>
+    <Link href={href ?? "/"}>
       <div className="flex flex-col bg-white dark:bg-gray-800 p-1 text-center rounded-md">
         <div className="w-full rounded-md relative aspect-[1/1] overflow-hidden">
           <Image

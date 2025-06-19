@@ -1,11 +1,9 @@
 "use client";
-import { LinkUnderline } from "@/components/Button";
 import { PortofolioCart } from "@/components/Card";
 import { RoundedBlurBackground } from "@/components/RoundedBlur";
 import { H1, P } from "@/components/Text";
-import { PortofolioData, PortofolioDataFull } from "@/data/Portofolio";
+import { PortofolioDataFull } from "@/data/Portofolio";
 import React from "react";
-import { motion } from "motion/react";
 
 const Portofolio = () => {
   return (

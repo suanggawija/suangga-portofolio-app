@@ -29,7 +29,7 @@ export const H1: React.FC<Heading> = ({ title }) => {
   );
 };
 
-export const H2: React.FC<Heading> = ({ title, delay = 0 }) => {
+export const H2: React.FC<Heading> = ({ title }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false });
 

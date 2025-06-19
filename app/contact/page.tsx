@@ -3,7 +3,6 @@ import { ButtonSecondary } from "@/components/Button";
 import { RoundedBlurBackground } from "@/components/RoundedBlur";
 import { H1 } from "@/components/Text";
 import React from "react";
-import { motion } from "motion/react";
 
 const Contact = () => {
   return (
