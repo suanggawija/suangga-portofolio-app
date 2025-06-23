@@ -81,7 +81,7 @@ export const SkillCart: React.FC<CartProps> = ({
     }}
     viewport={{ once: false }}
   >
-    <div className="p-3 bg-white dark:bg-gray-800 rounded-md h-[200px]">
+    <div className="p-3 bg-white dark:bg-gray-800 rounded-md min-h-[250px] md:min-h-[200px]">
       <div className="w-full rounded-md relative overflow-hidden">
         <Image
           priority

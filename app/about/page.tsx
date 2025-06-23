@@ -14,7 +14,7 @@ import { Tools } from "@/data/Tools";
 const About = () => {
   return (
     <>
-      <section className="w-full min-h-screen justify-center items-center flex gap-4 flex-col relative">
+      <section className="w-full min-h-screen justify-center items-center flex gap-4 flex-col relative text-center px-[18px] md:px-[80px]">
         <H1 title="Tentang Saya" />
         <P
           title={
@@ -28,10 +28,10 @@ const About = () => {
         <RoundedBlurBackground />
       </section>
 
-      <section className="w-full min-h-screen justify-center items-center flex gap-4 flex-col relative px-[80px]">
-        <div className="grid grid-cols-2 gap-6">
+      <section className="w-full min-h-screen justify-center items-center flex gap-4 flex-col relative text-center px-[18px] md:px-[80px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <motion.div
-            className="w-full h-[400px] rounded-md relative aspect-[9/12] overflow-hidden"
+            className="w-full h-[400px] rounded-md relative aspect-[9/12] overflow-hidden order md:order-1 order-2"
             initial="initial"
             whileInView="animate"
             variants={FadeInAnimation}
@@ -51,7 +51,7 @@ const About = () => {
             />
           </motion.div>
 
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 order-1 md:order-2">
             <H2 title="Suangga Wijanatha" delay={0.5} />
             <P
               className="w-full"
@@ -91,9 +91,9 @@ const About = () => {
         <RoundedBlurBackground />
       </section>
 
-      <section className="w-full min-h-screen justify-center items-center flex gap-4 flex-col relative px-[80px]">
+      <section className="w-full min-h-screen justify-center items-center flex gap-4 flex-col relative px-[18px] md:px-[80px]">
         <H2 title="Keahlian" />
-        <div className="grid grid-cols-4 gap-4 w-full">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full">
           {KeahlianData.map((keahliah, index) => (
             <SkillCart
               key={index}
@@ -107,9 +107,9 @@ const About = () => {
         <RoundedBlurBackground />
       </section>
 
-      <section className="w-full min-h-screen justify-center items-center flex gap-4 flex-col relative px-[80px]">
+      <section className="w-full min-h-screen justify-center items-center flex gap-4 flex-col relative px-[18px] md:px-[80px]">
         <H2 title="Tools" />
-        <div className="grid grid-cols-10 gap-4">
+        <div className="grid grid-cols-4 md:grid-cols-10 gap-4">
           {Tools.map((tool, index) => (
             <ToolsCart
               title={tool.title}
@@ -123,9 +123,9 @@ const About = () => {
         <RoundedBlurBackground />
       </section>
 
-      <section className="w-full min-h-screen flex flex-col gap-4 justify-center items-center relative px-[80px]">
+      <section className="w-full min-h-screen flex flex-col gap-4 justify-center items-center relative px-[18px] md:px-[80px]">
         <H2 title="Portofolio" />
-        <div className="w-full grid grid-cols-2 gap-4 ">
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4 ">
           {PortofolioData.map((porto, index) => (
             <PortofolioCart
               key={index}
@@ -137,7 +137,7 @@ const About = () => {
             />
           ))}
         </div>
-        <div className="flex w-full justify-end mt-3">
+        <div className="flex w-full justify-center md:justify-end mt-3">
           <LinkUnderline title=" Lihat Portofolio Lainnya" href="/portofolio" />
         </div>
         <RoundedBlurBackground />

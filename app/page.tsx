@@ -13,7 +13,7 @@ import React from "react";
 const Home = () => {
   return (
     <>
-      <section className="w-full min-h-screen justify-center items-center flex gap-4 flex-col relative">
+      <section className="w-full min-h-screen justify-center items-center flex gap-4 flex-col relative text-center px-[18px] md:px-[80px]">
         <H1 title="Suangga Wijanatha" />
         <P
           title="Full Stack Web Developer | Data Analyst | UI/UX Designer | Grafix"
@@ -27,10 +27,10 @@ const Home = () => {
       </section>
 
       {/*  */}
-      <section className="w-full min-h-screen flex flex-col gap-4 justify-center items-center relative">
+      <section className="w-full min-h-screen flex flex-col gap-4 justify-center items-center relative px-[18px] md:px-[80px]">
         <H2 title="Tentang Saya" />
         <P
-          className="w-[70%] text-center"
+          className="w-[100%] md:w-[70%] text-center"
           title={
             <>
               Halo 👋, semoga harimu menyenangkan! Perkenalkan, saya{" "}
@@ -63,9 +63,9 @@ const Home = () => {
         <RoundedBlurBackground />
       </section>
 
-      <section className="w-full min-h-screen flex flex-col gap-4 justify-center items-center relative px-[80px]">
+      <section className="w-full min-h-screen flex flex-col gap-4 justify-center items-center relative px-[18px] md:px-[80px]">
         <H2 title="Portofolio" />
-        <div className="w-full grid grid-cols-2 gap-4 ">
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4 ">
           {PortofolioData.map((porto, index) => (
             <PortofolioCart
               key={index}
@@ -77,13 +77,13 @@ const Home = () => {
             />
           ))}
         </div>
-        <div className="flex w-full justify-end mt-3">
+        <div className="flex w-full justify-center md:justify-end mt-3">
           <LinkUnderline title=" Lihat Portofolio Lainnya" href="/portofolio" />
         </div>
         <RoundedBlurBackground />
       </section>
 
-      <section className="w-full min-h-screen flex flex-col gap-4 justify-center items-center relative px-[80px] relative">
+      <section className="w-full min-h-screen flex flex-col gap-4 justify-center items-center relative px-[18px] md:px-[80px] relative">
         <H2 title="Kontak" />
         <div className="flex gap-2">
           <ButtonSecondary href="" title="Email" delay={0.3} />
